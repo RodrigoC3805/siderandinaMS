@@ -1,0 +1,6 @@
+#spring.application.name=siderandinaMSGateway
+spring:
+  application:
+    name: siderandinaMSGateway
+  config:
+    import: 'optional:configserver:http://localhost:8888'
