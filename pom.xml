@@ -13,6 +13,7 @@
   <groupId>dsw.siderandinaMS</groupId>
   <artifactId>siderandinaMSContainer</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <name>siderandinaMSContainer</name>
   <!-- FIXME change it to the project's website -->

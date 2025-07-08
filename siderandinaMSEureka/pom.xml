@@ -7,6 +7,7 @@
 		<artifactId>siderandinaMSContainer</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
+
 	<groupId>siderandinaMSEureka</groupId>
 	<artifactId>siderandinaMSEureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -45,6 +46,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+    		<groupId>org.springframework.cloud</groupId>
+    		<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 
 		<dependency>
