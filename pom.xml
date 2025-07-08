@@ -47,5 +47,6 @@
   <modules>
     <module>siderandinaMSGateway</module>
     <module>siderandinaMSEureka</module>
+    <module>siderandinaMSConfig</module>
   </modules>
 </project>
