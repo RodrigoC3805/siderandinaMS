@@ -6,12 +6,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="siderandinaMSCompras" />
+        <module name="siderandinaMSEureka" />
+        <module name="siderandinaMSVenta" />
+        <module name="siderandinaMSConfig" />
+        <module name="siderandinaMSGateway" />
+      </profile>
+      <profile name="Annotation profile for siderandinaMSContainer" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="siderandinaMSRRHH" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="siderandinaMSContainer" options="-parameters" />
+      <module name="siderandinaMSCompras" options="-parameters" />
+      <module name="siderandinaMSConfig" options="-parameters" />
+      <module name="siderandinaMSContainer" options="" />
+      <module name="siderandinaMSEureka" options="-parameters" />
+      <module name="siderandinaMSGateway" options="-parameters" />
+      <module name="siderandinaMSRRHH" options="-parameters" />
+      <module name="siderandinaMSVenta" options="-parameters" />
     </option>
   </component>
 </project>

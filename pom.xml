@@ -49,6 +49,7 @@
     <module>siderandinaMSEureka</module>
     <module>siderandinaMSConfig</module>
     <module>siderandinaMSCompras</module>
-    <module>siderandinaMSVentas</module>
+    <module>siderandinaMSVenta</module>
+    <module>siderandinaMSRRHH</module>
   </modules>
 </project>
