@@ -9,5 +9,5 @@ import dsw.siderandinaMS.Compras.model.Proveedor;
 public interface ProveedorRepository extends JpaRepository<Proveedor, Integer> {
     Proveedor findByEmail(String email);
     boolean existsByRuc(String ruc);
-    Optional<Proveedor> findByUsuarioIdUsuario(Integer idUsuario);    
+    Optional<Proveedor> findByIdUsuario(Integer idUsuario);    
 }

@@ -1,5 +1,6 @@
 package dsw.siderandinaMS.RRHH.controller;
 
+import dsw.siderandinaMS.RRHH.dto.UsuarioDTO;
 import dsw.siderandinaMS.RRHH.service.UsuarioService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -10,13 +10,14 @@ spring:
         import: "optional:configserver:http://localhost:8888"
     datasource:
         driver-class-name: org.postgresql.Driver
-        url: jdbc:postgresql://ep-floral-paper-acuw88rx-pooler.sa-east-1.aws.neon.tech:5432/neondb
-        username: neondb_owner
-        password: npg_lw0TotXrsIk9
+        url: jdbc:postgresql://localhost:5432/comprasDb
+        username: postgres
+        password: admin
     jpa:
         hibernate:
-            ddl-auto: create
+            ddl-auto: update
         database-platform: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
 
 eureka:
     instance:
