@@ -1,5 +1,7 @@
 package dsw.siderandinaMS.RRHH.service;
 
+import dsw.siderandinaMS.RRHH.client.IClienteClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,17 +20,22 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class AuthService {
-    /*
+    @Autowired
     private final UsuarioRepository usuarioRepository;
-    private final ClienteRepository clienteRepository;
+    @Autowired
+    private IClienteClient clienteClient;
+    @Autowired
     private final TrabajadorRepository trabajadorRepository;
-    private final ProveedorRepository proveedorRepository;
+
+    //private final ProveedorRepository proveedorRepository;
+    @Autowired
     private final PasswordEncoder passwordEncoder;
+    @Autowired
     private final JwtUtil jwtService;
     
     @Transactional
     public AuthResponse register(RegisterRequest request) {
-        if (clienteRepository.existsByRuc(request.getCliente().getRuc())) {
+        if (clienteClient.existsByRuc(request.getClienteDTO().getRuc())) {
             throw new IllegalArgumentException("Ya existe un usuario con ese RUC");
         }
         if (usuarioRepository.existsByEmail(request.getUsuario().getEmail())) {
@@ -37,9 +44,9 @@ public class AuthService {
         request.getUsuario().setPassword(passwordEncoder.encode(request.getUsuario().getPassword()));
         request.getUsuario().getTipoUsuario().setIdTipoUsuario(7);
         usuarioRepository.save(request.getUsuario());
-        request.getCliente().setUsuario(request.getUsuario());
-        request.getCliente().getTipoCliente().setIdTipoCliente(1);;
-        clienteRepository.save(request.getCliente());
+        request.getClienteDTO().setIdUsuario(request.getUsuario().getIdUsuario());
+        request.getClienteDTO().setIdTipoCliente(1);;
+        clienteClient.save(request.getClienteDTO());
 
         String jwtToken = jwtService.generateToken(request.getUsuario());
         return AuthResponse.builder()
@@ -65,7 +72,7 @@ public class AuthService {
                 .token(jwtToken)
                 .build();
     }
-    
+    /*
     @Transactional
     public AuthResponse registerProveedor(RegisterProveedorRequest request) {
         if (proveedorRepository.existsByRuc(request.getProveedor().getRuc()))
@@ -85,6 +92,7 @@ public class AuthService {
                 .token(jwtToken)
                 .build();
     }
+    */
     public AuthResponse login(LoginRequest request) {
         var usuario = usuarioRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado"));
@@ -97,5 +105,4 @@ public class AuthService {
                 .token(jwtToken)
                 .build();
     }
-    */
 }
