@@ -13,12 +13,8 @@ public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    public Optional<Cliente> findByUsuarioEmail(String email) {
-        return clienteRepository.findByUsuarioEmail(email);
-    }
-
-    public Optional<Cliente> findByUsuarioIdUsuario(Integer idUsuario) {
-        return clienteRepository.findByUsuarioIdUsuario(idUsuario);
+    public Optional<Cliente> findByIdUsuario(Integer idUsuario) {
+        return clienteRepository.findByIdUsuario(idUsuario);
     }
 
 }

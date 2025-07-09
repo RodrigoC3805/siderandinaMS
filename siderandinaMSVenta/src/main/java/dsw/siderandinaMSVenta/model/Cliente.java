@@ -30,11 +30,10 @@ public class Cliente {
     private String razonSocial;
     private String direccion;
     private String telefono;
-
+    @Column(name = "id_usuario")
+    private Integer idUsuario;
+    
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_tipo_cliente", referencedColumnName = "id_tipo_cliente")
     private TipoCliente tipoCliente;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
-    private Usuario usuario;
 }

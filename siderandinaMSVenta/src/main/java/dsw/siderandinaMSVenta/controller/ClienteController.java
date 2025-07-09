@@ -25,10 +25,10 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @GetMapping("/findclientebyuseremail")
-    public ResponseEntity<?> findByUserEmail(@RequestParam String email) {
+    public ResponseEntity<?> findByUserEmail(@RequestParam Integer idUsuario) {
         Optional<Cliente> cliente = null;
         try {
-            cliente = clienteService.findByUsuarioEmail(email);
+            cliente = clienteService.findByIdUsuario(idUsuario);
         } catch (Exception e) {
             logger.error("Error inesperado", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -43,7 +43,7 @@ public class ClienteController {
     public ResponseEntity<?> findByUserId(@RequestParam Integer idUsuario) {
         Optional<Cliente> cliente;
         try {
-            cliente = clienteService.findByUsuarioIdUsuario(idUsuario);
+            cliente = clienteService.findByIdUsuario(idUsuario);
         } catch (Exception e) {
             logger.error("Error inesperado", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
