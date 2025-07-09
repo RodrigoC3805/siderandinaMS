@@ -34,7 +34,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
 public class AuthController {
-    /*
     private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
     private final AuthService authService;
     private final TrabajadorService trabajadorService;
@@ -49,12 +48,13 @@ public class AuthController {
         logger.info(">register: " + request);
         return ResponseEntity.ok(authService.registerWorker(request));
     }
-    
+    /*
     @PostMapping("/registerproveedor")
     public ResponseEntity<AuthResponse> registerproveedor(@RequestBody RegisterProveedorRequest request) {
         logger.info(">register: " + request);
         return ResponseEntity.ok(authService.registerProveedor(request));
     }
+    */
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
 
@@ -89,5 +89,4 @@ public class AuthController {
                     .body(ErrorResponse.builder().message("Trabajador not found").build());
         return ResponseEntity.ok(trabajador.get());
     }
-     */
 }

@@ -16,6 +16,6 @@ public class ClienteDTO {
     private String razonSocial;
     private String direccion;
     private String telefono;
-    private String idTipoCliente;
-    private Usuario usuario;
+    private Integer idTipoCliente;
+    private Integer idUsuario;
 }
