@@ -1,4 +1,4 @@
-package dsw.siderandinams.gateway;
+package dsw.siderandinaMS.RRHH;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class SiderandinaMsGatewayApplication {
+public class SiderandinaMsrrhhApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SiderandinaMsGatewayApplication.class, args);
+		SpringApplication.run(SiderandinaMsrrhhApplication.class, args);
 	}
 
 }
