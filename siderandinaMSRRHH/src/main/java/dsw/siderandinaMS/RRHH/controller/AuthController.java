@@ -34,7 +34,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
 public class AuthController {
-    /*private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
+    /*
+    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
     private final AuthService authService;
     private final TrabajadorService trabajadorService;
     @PostMapping("/register")
